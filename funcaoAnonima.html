@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Função anônima</title>
+  </head>
+  <body>
+    <h1 id="meuElemento">Texto dentro do h1</h1>
+
+    <script>
+      //ajustar o texto de um elemento após determinado tempo
+      setTimeout(function () {
+        document.getElementById("meuElemento").innerText =
+          "Novo texto dentro do h1, alterado por setTimeout";
+      }, 2000);
+
+      //alterar o estilo do elemento
+      setInterval(function () {
+        const elemento = document.getElementById("meuElemento");
+        elemento.style.color = elemento.style.color === "red" ? "blue" : "red";
+      });
+    </script>
+  </body>
+</html>
